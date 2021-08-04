@@ -1,0 +1,47 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "taskName": "Compile",
+            "command": "clang++", 
+            "args": [
+                "${file}",
+                "-o", 
+                "${fileDirname}/${fileBasenameNoExtension}.exe",
+                "-g", 
+                "-Wall",
+                "-static-libgcc", 
+                "-fcolor-diagnostics",
+                "--target=x86_64-w64-mingw", 
+                "-std=c++1z",
+                "-lpthread"
+            ], 
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true 
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "silent", 
+                "focus": false,
+                "panel": "shared" 
+            },
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": [
+                    "relative",
+                    "/"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$", 
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            } 
+        }
+    ]
+}

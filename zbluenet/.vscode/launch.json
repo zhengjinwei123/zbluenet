@@ -1,0 +1,38 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Bash on Windows Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/mnt/hgfs/server-reborn/test/thread/demo1",
+            "args": ["-fThreading"],
+            "stopAtEntry": false,
+            "cwd": "/mnt/hgfs/server-reborn/test/thread",
+            "environment": [],
+            "externalConsole": true,
+            "windows": {
+                "MIMode": "gdb",
+                "setupCommands": [
+                    {
+                        "description": "Enable pretty-printing for gdb",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                    }
+                ]
+            },
+            "pipeTransport": {
+                "debuggerPath": "/usr/bin/gdb",
+                "pipeProgram": "${env:windir}\\system32\\bash.exe",
+                "pipeArgs": ["-c"],
+                "pipeCwd": ""
+            },
+            "sourceFileMap": {
+                "/mnt/c": "C:\\"
+            }
+        }
+    ]
+}

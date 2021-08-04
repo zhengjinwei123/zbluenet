@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\net">
+      <UniqueIdentifier>{b39e1c2b-c3c7-4b5f-8f47-1803eed248ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\exchange">
+      <UniqueIdentifier>{b8bbdfae-1428-4f5a-8ebb-be5d49e3da4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\protocol">
+      <UniqueIdentifier>{f97ac96a-aa09-41b7-9e9e-0116b05c7f8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\server">
+      <UniqueIdentifier>{97fc21ac-2e94-4dd7-918e-0c7429109ed0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="demo">
+      <UniqueIdentifier>{6e8bdb83-5c10-4f39-810d-238a0d5e3b33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="demo\proto">
+      <UniqueIdentifier>{4284ed4b-9d21-4767-8c51-c95dbea3537f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\zbluenet\timestamp.cc">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\demo\main.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\semaphore.cc">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\thread.cc">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\timer_heap.cc">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\logger_mgr.cc">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\logger_file_sink.cc">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\logger_async_sink.cc">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\logger.cc">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\dynamic_buffer.cc">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\logger_base.cc">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\log.cc">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\logger_stderr_sink.cc">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\net\fd_set.cc">
+      <Filter>头文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\net\socket_address.cc">
+      <Filter>头文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\net\tcp_socket.cc">
+      <Filter>头文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\net\select_acceptor.cc">
+      <Filter>头文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\net\tcp_connection.cc">
+      <Filter>头文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\net\select_reactor.cc">
+      <Filter>头文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\exchange\base_struct.cc">
+      <Filter>头文件\exchange</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\net\net_id.cc">
+      <Filter>头文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\protocol\net_command.cc">
+      <Filter>头文件\protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\protocol\net_protocol.cc">
+      <Filter>头文件\protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\net\net_thread.cc">
+      <Filter>头文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\net\reactor.cc">
+      <Filter>头文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\server\tcp_service.cc">
+      <Filter>头文件\server</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\server\game_server.cc">
+      <Filter>头文件\server</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\server\game_service.cc">
+      <Filter>头文件\server</Filter>
+    </ClCompile>
+    <ClCompile Include="src\demo\c2s_login_message_handler.cc">
+      <Filter>demo</Filter>
+    </ClCompile>
+    <ClCompile Include="src\demo\c2s_message.cc">
+      <Filter>demo</Filter>
+    </ClCompile>
+    <ClCompile Include="src\demo\server_app.cc">
+      <Filter>demo</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\net\epoll_acceptor.cc">
+      <Filter>头文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\net\epoller.cc">
+      <Filter>头文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\net\epoll_reactor.cc">
+      <Filter>头文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\net\io_service.cc">
+      <Filter>头文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\net\io_device.cc">
+      <Filter>头文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\net\acceptor.cc">
+      <Filter>头文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\net\network.cc">
+      <Filter>头文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\net\self_pipe.cc">
+      <Filter>头文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\net\epoll_service.cc">
+      <Filter>头文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="src\demo\proto\test.pb.cc">
+      <Filter>demo\proto</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\zbluenet\timestamp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\semaphore.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\thread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\base_heap_value.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\timer_heap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\class_util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\type_define.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\timer_id_allocator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\timer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\concurrent_queue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\dynamic_buffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\logger.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\logger_async_sink.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\logger_file_sink.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\logger_mgr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\logger_sink.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\object_pool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\logger_base.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\logger_stderr_sink.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\net\fd_set.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\net\network.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\net\platform.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\net\socket_address.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\net\tcp_socket.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\net\socket_id_allocator.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\net\acceptor.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\net\select_acceptor.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\net\tcp_connection.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\net\io_device.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\net\reactor.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\net\select_reactor.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\exchange\base_struct.h">
+      <Filter>头文件\exchange</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\net\net_id.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\protocol\net_command.h">
+      <Filter>头文件\protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\protocol\net_protocol.h">
+      <Filter>头文件\protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\net\net_thread.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\server\tcp_service.h">
+      <Filter>头文件\server</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\server\game_server.h">
+      <Filter>头文件\server</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\net\message_queue.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\server\game_service.h">
+      <Filter>头文件\server</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\exchange\macro.h">
+      <Filter>头文件\exchange</Filter>
+    </ClInclude>
+    <ClInclude Include="src\demo\c2s_login_message_handler.h">
+      <Filter>demo</Filter>
+    </ClInclude>
+    <ClInclude Include="src\demo\c2s_message.h">
+      <Filter>demo</Filter>
+    </ClInclude>
+    <ClInclude Include="src\demo\server_app.h">
+      <Filter>demo</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\net\epoll_acceptor.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\net\io_service.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\net\epoller.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\net\epoll_reactor.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\net\self_pipe.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\net\epoll_service.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="src\demo\proto\test.pb.h">
+      <Filter>demo\proto</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\demo\c2s_login_message_handler.cc" />
+    <ClCompile Include="src\demo\c2s_message.cc" />
+    <ClCompile Include="src\demo\main.cc" />
+    <ClCompile Include="src\demo\proto\test.pb.cc" />
+    <ClCompile Include="src\demo\server_app.cc" />
+    <ClCompile Include="src\zbluenet\dynamic_buffer.cc" />
+    <ClCompile Include="src\zbluenet\exchange\base_struct.cc" />
+    <ClCompile Include="src\zbluenet\log.cc" />
+    <ClCompile Include="src\zbluenet\logger.cc" />
+    <ClCompile Include="src\zbluenet\logger_async_sink.cc" />
+    <ClCompile Include="src\zbluenet\logger_base.cc" />
+    <ClCompile Include="src\zbluenet\logger_file_sink.cc" />
+    <ClCompile Include="src\zbluenet\logger_mgr.cc" />
+    <ClCompile Include="src\zbluenet\logger_stderr_sink.cc" />
+    <ClCompile Include="src\zbluenet\net\acceptor.cc" />
+    <ClCompile Include="src\zbluenet\net\epoller.cc" />
+    <ClCompile Include="src\zbluenet\net\epoll_acceptor.cc" />
+    <ClCompile Include="src\zbluenet\net\epoll_reactor.cc" />
+    <ClCompile Include="src\zbluenet\net\epoll_service.cc" />
+    <ClCompile Include="src\zbluenet\net\fd_set.cc" />
+    <ClCompile Include="src\zbluenet\net\io_device.cc" />
+    <ClCompile Include="src\zbluenet\net\io_service.cc" />
+    <ClCompile Include="src\zbluenet\net\network.cc" />
+    <ClCompile Include="src\zbluenet\net\net_id.cc" />
+    <ClCompile Include="src\zbluenet\net\net_thread.cc" />
+    <ClCompile Include="src\zbluenet\net\reactor.cc" />
+    <ClCompile Include="src\zbluenet\net\select_acceptor.cc" />
+    <ClCompile Include="src\zbluenet\net\select_reactor.cc" />
+    <ClCompile Include="src\zbluenet\net\self_pipe.cc" />
+    <ClCompile Include="src\zbluenet\net\socket_address.cc" />
+    <ClCompile Include="src\zbluenet\net\tcp_connection.cc" />
+    <ClCompile Include="src\zbluenet\net\tcp_socket.cc" />
+    <ClCompile Include="src\zbluenet\protocol\net_command.cc" />
+    <ClCompile Include="src\zbluenet\protocol\net_protocol.cc" />
+    <ClCompile Include="src\zbluenet\semaphore.cc" />
+    <ClCompile Include="src\zbluenet\server\game_server.cc" />
+    <ClCompile Include="src\zbluenet\server\game_service.cc" />
+    <ClCompile Include="src\zbluenet\server\tcp_service.cc" />
+    <ClCompile Include="src\zbluenet\thread.cc" />
+    <ClCompile Include="src\zbluenet\timer_heap.cc" />
+    <ClCompile Include="src\zbluenet\timestamp.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\demo\c2s_login_message_handler.h" />
+    <ClInclude Include="src\demo\c2s_message.h" />
+    <ClInclude Include="src\demo\proto\test.pb.h" />
+    <ClInclude Include="src\demo\server_app.h" />
+    <ClInclude Include="src\zbluenet\base_heap_value.h" />
+    <ClInclude Include="src\zbluenet\class_util.h" />
+    <ClInclude Include="src\zbluenet\concurrent_queue.h" />
+    <ClInclude Include="src\zbluenet\dynamic_buffer.h" />
+    <ClInclude Include="src\zbluenet\exchange\base_struct.h" />
+    <ClInclude Include="src\zbluenet\exchange\macro.h" />
+    <ClInclude Include="src\zbluenet\log.h" />
+    <ClInclude Include="src\zbluenet\logger.h" />
+    <ClInclude Include="src\zbluenet\logger_async_sink.h" />
+    <ClInclude Include="src\zbluenet\logger_base.h" />
+    <ClInclude Include="src\zbluenet\logger_file_sink.h" />
+    <ClInclude Include="src\zbluenet\logger_mgr.h" />
+    <ClInclude Include="src\zbluenet\logger_sink.h" />
+    <ClInclude Include="src\zbluenet\logger_stderr_sink.h" />
+    <ClInclude Include="src\zbluenet\net\acceptor.h" />
+    <ClInclude Include="src\zbluenet\net\epoller.h" />
+    <ClInclude Include="src\zbluenet\net\epoll_acceptor.h" />
+    <ClInclude Include="src\zbluenet\net\epoll_reactor.h" />
+    <ClInclude Include="src\zbluenet\net\epoll_service.h" />
+    <ClInclude Include="src\zbluenet\net\io_service.h" />
+    <ClInclude Include="src\zbluenet\net\message_queue.h" />
+    <ClInclude Include="src\zbluenet\net\net_id.h" />
+    <ClInclude Include="src\zbluenet\net\net_thread.h" />
+    <ClInclude Include="src\zbluenet\net\reactor.h" />
+    <ClInclude Include="src\zbluenet\net\fd_set.h" />
+    <ClInclude Include="src\zbluenet\net\io_device.h" />
+    <ClInclude Include="src\zbluenet\net\network.h" />
+    <ClInclude Include="src\zbluenet\net\platform.h" />
+    <ClInclude Include="src\zbluenet\net\select_acceptor.h" />
+    <ClInclude Include="src\zbluenet\net\select_reactor.h" />
+    <ClInclude Include="src\zbluenet\net\self_pipe.h" />
+    <ClInclude Include="src\zbluenet\net\socket_address.h" />
+    <ClInclude Include="src\zbluenet\net\socket_id_allocator.h" />
+    <ClInclude Include="src\zbluenet\net\tcp_connection.h" />
+    <ClInclude Include="src\zbluenet\net\tcp_socket.h" />
+    <ClInclude Include="src\zbluenet\object_pool.h" />
+    <ClInclude Include="src\zbluenet\protocol\net_command.h" />
+    <ClInclude Include="src\zbluenet\protocol\net_protocol.h" />
+    <ClInclude Include="src\zbluenet\semaphore.h" />
+    <ClInclude Include="src\zbluenet\server\game_server.h" />
+    <ClInclude Include="src\zbluenet\server\game_service.h" />
+    <ClInclude Include="src\zbluenet\server\tcp_service.h" />
+    <ClInclude Include="src\zbluenet\thread.h" />
+    <ClInclude Include="src\zbluenet\timer.h" />
+    <ClInclude Include="src\zbluenet\timer_heap.h" />
+    <ClInclude Include="src\zbluenet\timer_id_allocator.h" />
+    <ClInclude Include="src\zbluenet\timestamp.h" />
+    <ClInclude Include="src\zbluenet\type_define.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{42ADA958-BFA4-4D4F-817B-22782A49D758}</ProjectGuid>
+    <RootNamespace>zbluenet</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>E:\linuxcpp\zbluenet\zbluenet\src\zbluenet;E:\linuxcpp\zbluenet\zbluenet\src\lib;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\linuxcpp\zbluenet\protobufdemo\lib\google\protobuf\lib\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>E:\linuxcpp\zbluenet\zbluenet\src\zbluenet;E:\linuxcpp\zbluenet\zbluenet\src\lib;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\linuxcpp\zbluenet\protobufdemo\lib\google\protobuf\lib\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>E:\linuxcpp\zbluenet\zbluenet\src\zbluenet;E:\linuxcpp\zbluenet\zbluenet\src\lib;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\linuxcpp\zbluenet\protobufdemo\lib\google\protobuf\lib\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>E:\linuxcpp\zbluenet\zbluenet\src\zbluenet;E:\linuxcpp\zbluenet\zbluenet\src\lib;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\linuxcpp\zbluenet\protobufdemo\lib\google\protobuf\lib\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>E:\linuxcpp\zbluenet\zbluenet\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;ZBLUENET_BUILD_ENABLE_BASE_LOG;PROTOBUF_USE_DLLS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>libprotobufd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>E:\linuxcpp\zbluenet\zbluenet\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;ZBLUENET_BUILD_ENABLE_BASE_LOG;PROTOBUF_USE_DLLS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>libprotobufd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>E:\linuxcpp\zbluenet\zbluenet\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;ZBLUENET_BUILD_ENABLE_BASE_LOG;PROTOBUF_USE_DLLS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>libprotobufd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>E:\linuxcpp\zbluenet\zbluenet\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;ZBLUENET_BUILD_ENABLE_BASE_LOG;PROTOBUF_USE_DLLS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>libprotobufd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

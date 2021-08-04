@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+message Login {
+	optional string account = 1;
+	optional int32 age = 2;
+	repeated int32 friends = 3;
+}

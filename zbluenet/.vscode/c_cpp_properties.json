@@ -1,0 +1,39 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "intelliSenseMode": "clang-x64",
+            "cppStandard":"c++11",
+            "includePath": [
+                "${workspaceFolder}/**", 
+                "C:\\Program Files\\LLVM\\gnu.c.lib\\include",
+                "C:\\Program Files\\LLVM\\gnu.c.lib\\include\\bits",
+                "C:\\Program Files\\LLVM\\gnu.c.lib\\include\\c++\\4.8.2",
+                "C:\\Program Files\\LLVM\\gnu.c.lib\\include\\c++\\4.8.2\backward",
+                "C:\\Program Files\\LLVM\\gnu.c.lib\\include\\c++\\4.8.2\\bits",
+                "C:\\Program Files\\LLVM\\gnu.c.lib\\include\\c++\\4.8.2\\x86_64-redhat-linux",
+                "C:\\Program Files\\LLVM\\gnu.c.lib\\include\\c++\\4.8.2\\ext"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "__cdecl=__attribute__((__cdecl__))"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/**",
+                    "C:\\Program Files\\LLVM\\gnu.c.lib\\include",
+                    "C:\\Program Files\\LLVM\\gnu.c.lib\\include\\bits",
+                    "C:\\Program Files\\LLVM\\gnu.c.lib\\include\\c++\\4.8.2",
+                    "C:\\Program Files\\LLVM\\gnu.c.lib\\include\\c++\\4.8.2\backward",
+                    "C:\\Program Files\\LLVM\\gnu.c.lib\\include\\c++\\4.8.2\\bits",
+                    "C:\\Program Files\\LLVM\\gnu.c.lib\\include\\c++\\4.8.2\\x86_64-redhat-linux",
+                    "C:\\Program Files\\LLVM\\gnu.c.lib\\include\\c++\\4.8.2\\ext"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        }
+    ],
+    "version": 4
+}
