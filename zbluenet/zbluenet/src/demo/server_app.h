@@ -3,7 +3,9 @@
 #include <zbluenet/net/net_id.h>
 #include <zbluenet/server/game_server.h>
 #include <zbluenet/class_util.h>
+#include <functional>
 
+#include "c2s.h"
 
 class ServerApp {
 private:
@@ -33,10 +35,33 @@ public:
 
 	void start();
 
+	template <typename AnyType>
+	void registerMessageHandler(const std::function<void(const zbluenet::net::NetId &, const AnyType *)> &message_handler)
+	{
+		static const int message_id = protocol::C2SMessageType::id<AnyType>::value;
+		pserver_->registerMessageHandlerFunc(message_id, message_handler);
+	}
+
+	template <typename AnyType>
+	void sendMessage(const zbluenet::net::NetId &net_id, std::unique_ptr <AnyType> &messsage)
+	{
+		static const int message_id = protocol::C2SMessageType::id<AnyType>::value;
+		pserver_->sendMessage(net_id, message_id, messsage);
+	}
+
+	template<typename AnyType>
+	void broadcastMessage(std::unique_ptr <AnyType> &messsage)
+	{
+		static const int message_id = protocol::C2SMessageType::id<AnyType>::value;
+		pserver_->broadcastMessage(message_id, messsage);
+	}
+
 private:
 	zbluenet::server::GameServer *pserver_;
 	static ServerApp *instance_;
 
 };
+
+#define sServerApp ServerApp::getInstance()
 
 #endif // SERVER_APP_H1

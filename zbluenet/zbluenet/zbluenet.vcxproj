@@ -20,9 +20,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\demo\c2s_login_message_handler.cc" />
-    <ClCompile Include="src\demo\c2s_message.cc" />
+    <ClCompile Include="src\demo\c2s.cc" />
     <ClCompile Include="src\demo\main.cc" />
-    <ClCompile Include="src\demo\proto\test.pb.cc" />
+    <ClCompile Include="src\demo\proto\c2s.pb.cc" />
     <ClCompile Include="src\demo\server_app.cc" />
     <ClCompile Include="src\zbluenet\dynamic_buffer.cc" />
     <ClCompile Include="src\zbluenet\exchange\base_struct.cc" />
@@ -63,8 +63,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\demo\c2s_login_message_handler.h" />
-    <ClInclude Include="src\demo\c2s_message.h" />
-    <ClInclude Include="src\demo\proto\test.pb.h" />
+    <ClInclude Include="src\demo\c2s.h" />
+    <ClInclude Include="src\demo\proto\c2s.pb.h" />
     <ClInclude Include="src\demo\server_app.h" />
     <ClInclude Include="src\zbluenet\base_heap_value.h" />
     <ClInclude Include="src\zbluenet\class_util.h" />

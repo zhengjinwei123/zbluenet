@@ -120,9 +120,6 @@
     <ClCompile Include="src\demo\c2s_login_message_handler.cc">
       <Filter>demo</Filter>
     </ClCompile>
-    <ClCompile Include="src\demo\c2s_message.cc">
-      <Filter>demo</Filter>
-    </ClCompile>
     <ClCompile Include="src\demo\server_app.cc">
       <Filter>demo</Filter>
     </ClCompile>
@@ -153,8 +150,11 @@
     <ClCompile Include="src\zbluenet\net\epoll_service.cc">
       <Filter>头文件\net</Filter>
     </ClCompile>
-    <ClCompile Include="src\demo\proto\test.pb.cc">
+    <ClCompile Include="src\demo\proto\c2s.pb.cc">
       <Filter>demo\proto</Filter>
+    </ClCompile>
+    <ClCompile Include="src\demo\c2s.cc">
+      <Filter>demo</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -287,9 +287,6 @@
     <ClInclude Include="src\demo\c2s_login_message_handler.h">
       <Filter>demo</Filter>
     </ClInclude>
-    <ClInclude Include="src\demo\c2s_message.h">
-      <Filter>demo</Filter>
-    </ClInclude>
     <ClInclude Include="src\demo\server_app.h">
       <Filter>demo</Filter>
     </ClInclude>
@@ -311,8 +308,11 @@
     <ClInclude Include="src\zbluenet\net\epoll_service.h">
       <Filter>头文件\net</Filter>
     </ClInclude>
-    <ClInclude Include="src\demo\proto\test.pb.h">
+    <ClInclude Include="src\demo\proto\c2s.pb.h">
       <Filter>demo\proto</Filter>
+    </ClInclude>
+    <ClInclude Include="src\demo\c2s.h">
+      <Filter>demo</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
