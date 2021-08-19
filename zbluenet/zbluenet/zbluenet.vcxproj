@@ -57,6 +57,8 @@
     <ClCompile Include="src\zbluenet\server\game_server.cc" />
     <ClCompile Include="src\zbluenet\server\game_service.cc" />
     <ClCompile Include="src\zbluenet\server\tcp_service.cc" />
+    <ClCompile Include="src\zbluenet\task\async_task.cc" />
+    <ClCompile Include="src\zbluenet\task\mysql_async_task.cc" />
     <ClCompile Include="src\zbluenet\thread.cc" />
     <ClCompile Include="src\zbluenet\timer_heap.cc" />
     <ClCompile Include="src\zbluenet\timestamp.cc" />
@@ -108,6 +110,8 @@
     <ClInclude Include="src\zbluenet\server\game_server.h" />
     <ClInclude Include="src\zbluenet\server\game_service.h" />
     <ClInclude Include="src\zbluenet\server\tcp_service.h" />
+    <ClInclude Include="src\zbluenet\task\async_task.h" />
+    <ClInclude Include="src\zbluenet\task\mysql_async_task.h" />
     <ClInclude Include="src\zbluenet\thread.h" />
     <ClInclude Include="src\zbluenet\timer.h" />
     <ClInclude Include="src\zbluenet\timer_heap.h" />
@@ -167,19 +171,19 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>E:\linuxcpp\zbluenet\zbluenet\src\zbluenet;E:\linuxcpp\zbluenet\zbluenet\src\lib;$(IncludePath)</IncludePath>
+    <IncludePath>E:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet;E:\linuxcpp\zbluenet\zbluenet\src\lib;$(IncludePath)</IncludePath>
     <LibraryPath>E:\linuxcpp\zbluenet\protobufdemo\lib\google\protobuf\lib\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>E:\linuxcpp\zbluenet\zbluenet\src\zbluenet;E:\linuxcpp\zbluenet\zbluenet\src\lib;$(IncludePath)</IncludePath>
+    <IncludePath>E:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet;E:\linuxcpp\zbluenet\zbluenet\src\lib;$(IncludePath)</IncludePath>
     <LibraryPath>E:\linuxcpp\zbluenet\protobufdemo\lib\google\protobuf\lib\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>E:\linuxcpp\zbluenet\zbluenet\src\zbluenet;E:\linuxcpp\zbluenet\zbluenet\src\lib;$(IncludePath)</IncludePath>
+    <IncludePath>E:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet;E:\linuxcpp\zbluenet\zbluenet\src\lib;$(IncludePath)</IncludePath>
     <LibraryPath>E:\linuxcpp\zbluenet\protobufdemo\lib\google\protobuf\lib\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>E:\linuxcpp\zbluenet\zbluenet\src\zbluenet;E:\linuxcpp\zbluenet\zbluenet\src\lib;$(IncludePath)</IncludePath>
+    <IncludePath>E:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet;E:\linuxcpp\zbluenet\zbluenet\src\lib;$(IncludePath)</IncludePath>
     <LibraryPath>E:\linuxcpp\zbluenet\protobufdemo\lib\google\protobuf\lib\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -188,7 +192,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>E:\linuxcpp\zbluenet\zbluenet\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;ZBLUENET_BUILD_ENABLE_BASE_LOG;PROTOBUF_USE_DLLS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -202,7 +206,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>E:\linuxcpp\zbluenet\zbluenet\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;ZBLUENET_BUILD_ENABLE_BASE_LOG;PROTOBUF_USE_DLLS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -218,7 +222,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>E:\linuxcpp\zbluenet\zbluenet\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;ZBLUENET_BUILD_ENABLE_BASE_LOG;PROTOBUF_USE_DLLS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -236,7 +240,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>E:\linuxcpp\zbluenet\zbluenet\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;ZBLUENET_BUILD_ENABLE_BASE_LOG;PROTOBUF_USE_DLLS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>

@@ -31,6 +31,9 @@
     <Filter Include="demo\proto">
       <UniqueIdentifier>{4284ed4b-9d21-4767-8c51-c95dbea3537f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\task">
+      <UniqueIdentifier>{b86666e3-8290-4cf8-807b-b45d08090bfb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\zbluenet\timestamp.cc">
@@ -155,6 +158,12 @@
     </ClCompile>
     <ClCompile Include="src\demo\c2s.cc">
       <Filter>demo</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\task\async_task.cc">
+      <Filter>头文件\task</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\task\mysql_async_task.cc">
+      <Filter>头文件\task</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -313,6 +322,12 @@
     </ClInclude>
     <ClInclude Include="src\demo\c2s.h">
       <Filter>demo</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\task\async_task.h">
+      <Filter>头文件\task</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\task\mysql_async_task.h">
+      <Filter>头文件\task</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
