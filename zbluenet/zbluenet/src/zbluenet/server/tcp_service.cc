@@ -130,7 +130,7 @@ namespace zbluenet {
 		{
 			// Æô¶¯ÍøÂçÏß³Ì
 			for (size_t i = 0; i < net_threads_.size(); ++i) {
-				net_threads_[i]->start();
+				net_threads_[i]->start(nullptr, nullptr);
 			}
 
 			loop();

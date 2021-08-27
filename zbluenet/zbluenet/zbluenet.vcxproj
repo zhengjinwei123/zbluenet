@@ -42,6 +42,7 @@
     <ClCompile Include="src\zbluenet\net\io_device.cc" />
     <ClCompile Include="src\zbluenet\net\io_service.cc" />
     <ClCompile Include="src\zbluenet\net\network.cc" />
+    <ClCompile Include="src\zbluenet\net\net_client.cc" />
     <ClCompile Include="src\zbluenet\net\net_id.cc" />
     <ClCompile Include="src\zbluenet\net\net_thread.cc" />
     <ClCompile Include="src\zbluenet\net\reactor.cc" />
@@ -89,6 +90,7 @@
     <ClInclude Include="src\zbluenet\net\epoll_service.h" />
     <ClInclude Include="src\zbluenet\net\io_service.h" />
     <ClInclude Include="src\zbluenet\net\message_queue.h" />
+    <ClInclude Include="src\zbluenet\net\net_client.h" />
     <ClInclude Include="src\zbluenet\net\net_id.h" />
     <ClInclude Include="src\zbluenet\net\net_thread.h" />
     <ClInclude Include="src\zbluenet\net\reactor.h" />

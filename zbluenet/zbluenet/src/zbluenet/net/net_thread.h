@@ -47,7 +47,7 @@ namespace zbluenet {
 				const NewNetCommandCallback &new_net_cmd_cb,
 				const RecvMessageCallback &recv_message_cb);
 
-			void start(); // 启动线程
+			void start(const Thread::EventCallback &onBefore, const Thread::EventCallback &onEnd); // 启动线程
 			void stop();
 			void push(NetCommand *cmd); // 接收来自主线程发送来的消息
 			void attach(std::unique_ptr<TcpSocket> &peer_socket); // 主线程告诉 新连接到来
@@ -56,20 +56,24 @@ namespace zbluenet {
 			void closeSocket(TcpSocket::SocketId socket_id);
 
 			const int getId() const { return id_;  }
-		private:
+
+			IOService::TimerId startTimer(int64_t timeout_ms, const IOService::TimerCallback &timer_cb, int call_times = -1);
+			void stopTimer(IOService::TimerId timer_id);
+
+		protected:
 			
 			void sendNetCommandClose(TcpSocket::SocketId socket_id);
 			void sendNetCommandNew(TcpSocket::SocketId socket_id);
 
 			void onRecvMessage(Reactor *reactor, TcpSocket::SocketId socket_id, DynamicBuffer *buffer);
-			void onPeerClose(Reactor *reactor, TcpSocket::SocketId socket_id);
-			void onError(Reactor *reactor, TcpSocket::SocketId socket_id, int error);
-			void onNetCommand(NetCommandQueue *queue = nullptr);
+			
+			virtual void onNetCommand(NetCommandQueue *queue = nullptr);
+			virtual void onPeerClose(Reactor *reactor, TcpSocket::SocketId socket_id);
+			virtual void onError(Reactor *reactor, TcpSocket::SocketId socket_id, int error);
 
 			void quit();
 
-
-		private:
+		protected:
 			int id_;
 			Thread thread_;
 			Reactor *reactor_;

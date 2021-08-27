@@ -6,6 +6,7 @@
 
 namespace zbluenet {
 	class Thread {
+	public:
 		using EventCallback = std::function<void(Thread*)>;
 
 	public:

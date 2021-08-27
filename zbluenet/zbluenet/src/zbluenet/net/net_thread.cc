@@ -85,14 +85,17 @@ namespace zbluenet {
 			return true;
 		}
 
-		void NetThread::start()
+		void NetThread::start(const Thread::EventCallback &onBefore, const Thread::EventCallback &onEnd)
 		{
 			NetThread *that = this;
-			thread_.start(nullptr, [that](Thread *pthread) -> void {
+			thread_.start(onBefore, [that](Thread *pthread) -> void {
 				if (that->reactor_ != nullptr) {
 					that->reactor_->loop();
 				}
-			});
+			}, onEnd);
+
+		
+
 		}
 
 		void NetThread::stop()
@@ -155,6 +158,16 @@ namespace zbluenet {
 			LOG_MESSAGE_ERROR("net_thread error  net_id (%d:%lx), error_code=(%d), error=(%s)", id_, socket_id, error, strerror(error));
 
 			closeSocket(socket_id);
+		}
+
+		IOService::TimerId NetThread::startTimer(int64_t timeout_ms, const IOService::TimerCallback &timer_cb, int call_times)
+		{
+			return reactor_->startTimer(timeout_ms, timer_cb, call_times);
+		}
+
+		void NetThread::stopTimer(IOService::TimerId timer_id)
+		{
+			reactor_->stopTimer(timer_id);
 		}
 
 		void NetThread::quit()
