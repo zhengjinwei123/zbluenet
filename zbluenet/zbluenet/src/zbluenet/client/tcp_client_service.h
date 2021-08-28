@@ -50,9 +50,10 @@ namespace zbluenet {
 			using CreateMessageFunc = std::function<zbluenet::exchange::BaseStruct *(int)>;
 			using RecvMessageCallback = std::function< void(NetThread *, TcpSocket::SocketId, DynamicBuffer *, const NewNetCommandCallback &)>;
 
-			using MessageHandler = std::function<void(const NetId &, const zbluenet::exchange::BaseStruct *)>;
+			using MessageHandler = std::function<void(const zbluenet::exchange::BaseStruct *)>;
 			using MessageHandlerMap = std::unordered_map<int, MessageHandler>;
 			using NetCommandQueue = MessageQueue<NetCommand *>; // 发送消息的队列
+
 
 			TcpClientService(const std::string &host, uint16_t port,
 				const CreateMessageFunc &create_message_func, int reconnect_interval_ms = 5000);
@@ -63,16 +64,16 @@ namespace zbluenet {
 			void start();
 			void stop();
 
-			void sendMessage(const NetId &net_id, int message_id, std::unique_ptr<zbluenet::exchange::BaseStruct> &message);
+			void sendMessage(int message_id, std::unique_ptr<zbluenet::exchange::BaseStruct> &message);
 			MessageHandler getMessageHandler(int message_id) const;
 			void setMessageHandler(int message_id, const MessageHandler &message_handler);
 			void processNetCommand(const NetCommand *cmd);
 
-			void onNetCommand(NetCommandQueue *queue);
-
 			bool connect();
 			void disconnect();
 
+			void onConnect();
+			void onDisconnect();
 
 			void startConnectTimer();
 			void stopConnectTimer();

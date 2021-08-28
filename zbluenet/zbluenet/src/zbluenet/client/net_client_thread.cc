@@ -6,6 +6,7 @@ namespace zbluenet {
 
 		NetClientThread::NetClientThread(int max_recv_packet_lenth, int max_send_packet_length, const NetClientThread::CreateMessageFunc &create_message_func) :\
 			NetThread(max_recv_packet_lenth, max_send_packet_length, create_message_func),
+			remote_socket_id_(-1),
 			peer_close_cb_(nullptr),
 			error_cb_(nullptr)
 		{

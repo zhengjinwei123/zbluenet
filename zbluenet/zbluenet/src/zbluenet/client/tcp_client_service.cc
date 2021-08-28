@@ -1,4 +1,5 @@
 #include <zbluenet/client/tcp_client_service.h>
+#include <zbluenet/log.h>
 
 namespace zbluenet {
 	namespace client {
@@ -65,9 +66,13 @@ namespace zbluenet {
 			stopConnectTimer();
 		}
 
-		void TcpClientService::sendMessage(const NetId &net_id, int message_id, std::unique_ptr<zbluenet::exchange::BaseStruct> &message)
+		void TcpClientService::sendMessage(int message_id,
+			std::unique_ptr<zbluenet::exchange::BaseStruct> &message)
 		{
-
+			std::unique_ptr<NetCommand> cmd(new NetCommand(NetCommand::Type::MESSAGE));
+			cmd->message_id = message_id;
+			cmd->message = message.release();
+			push(cmd);
 		}
 
 		TcpClientService::MessageHandler TcpClientService::getMessageHandler(int message_id) const
@@ -86,13 +91,31 @@ namespace zbluenet {
 
 		void TcpClientService::processNetCommand(const NetCommand *cmd)
 		{
-
+			if (NetCommand::Type::NEW == cmd->type) {
+				onConnect();
+			} else if (NetCommand::Type::CLOSE == cmd->type) {
+				onDisconnect();
+			} else if (NetCommand::Type::MESSAGE == cmd->type) {
+				MessageHandler handlerFunc = getMessageHandler(cmd->message_id);
+				if (nullptr != handlerFunc) {
+					handlerFunc(cmd->message);
+				} else {
+					LOG_WARNING("TcpClientService::processNetCommand not found message_id(%d) handle",
+						cmd->message_id);
+				}
+			}
 		}
 
-		void TcpClientService::onNetCommand(NetCommandQueue *queue)
+		void TcpClientService::onConnect()
 		{
 
 		}
+
+		void TcpClientService::onDisconnect()
+		{
+
+		}
+
 
 		bool TcpClientService::connect()
 		{
@@ -102,6 +125,8 @@ namespace zbluenet {
 			}
 			socket_id_ = tcp_socket_.getId();
 			connected_ = true;
+
+			net_thread_.setSocketId(tcp_socket_.getId());
 
 			std::unique_ptr<TcpSocket> socket(new TcpSocket());
 			net_thread_.attach(socket);

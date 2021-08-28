@@ -33,17 +33,20 @@ namespace zbluenet {
 			NetClientThread(int max_recv_packet_lenth, int max_send_packet_length, const CreateMessageFunc &create_message_func);
 			~NetClientThread();
 
+			void setSocketId(TcpSocket::SocketId socket_id) { remote_socket_id_ = socket_id; }
+
 
 			void setPeerCloseCallback(const SocketEventCallback &peer_close_cb);
 			void setErrorCallback(const SocketEventCallback &error_cb);
 
 			void push(NetCommand *cmd);
-
+			 
 			virtual void onNetCommand(NetCommandQueue *queue = nullptr);
 			virtual void onPeerClose(Reactor *reactor, TcpSocket::SocketId socket_id);
 			virtual void onError(Reactor *reactor, TcpSocket::SocketId socket_id, int error);
 
 		private:
+			TcpSocket::SocketId remote_socket_id_;
 			SocketEventCallback peer_close_cb_;
 			SocketEventCallback error_cb_;
 		};

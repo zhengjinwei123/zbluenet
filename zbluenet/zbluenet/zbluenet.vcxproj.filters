@@ -34,6 +34,9 @@
     <Filter Include="头文件\task">
       <UniqueIdentifier>{b86666e3-8290-4cf8-807b-b45d08090bfb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\client">
+      <UniqueIdentifier>{6b8f7b24-14ca-415d-bf5d-422c1825a66b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\zbluenet\timestamp.cc">
@@ -167,6 +170,12 @@
     </ClCompile>
     <ClCompile Include="src\zbluenet\net\net_client.cc">
       <Filter>头文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\client\net_client_thread.cc">
+      <Filter>头文件\client</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\client\tcp_client_service.cc">
+      <Filter>头文件\client</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -334,6 +343,12 @@
     </ClInclude>
     <ClInclude Include="src\zbluenet\net\net_client.h">
       <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\client\net_client_thread.h">
+      <Filter>头文件\client</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\client\tcp_client_service.h">
+      <Filter>头文件\client</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
