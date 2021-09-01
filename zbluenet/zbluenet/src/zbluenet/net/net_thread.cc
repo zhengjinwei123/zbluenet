@@ -93,9 +93,6 @@ namespace zbluenet {
 					that->reactor_->loop();
 				}
 			}, onEnd);
-
-		
-
 		}
 
 		void NetThread::stop()

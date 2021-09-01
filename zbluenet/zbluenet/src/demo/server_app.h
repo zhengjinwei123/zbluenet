@@ -4,6 +4,9 @@
 #include <zbluenet/server/game_server.h>
 #include <zbluenet/class_util.h>
 #include <functional>
+#include <zbluenet/client/tcp_client.h>
+
+#include <memory>
 
 #include "c2s.h"
 
@@ -60,6 +63,7 @@ private:
 	zbluenet::server::GameServer *pserver_;
 	static ServerApp *instance_;
 
+	std::unique_ptr<zbluenet::client::TcpClient> battle_server_terminal_;
 };
 
 #define sServerApp ServerApp::getInstance()

@@ -1,6 +1,7 @@
 #include <zbluenet/net/select_reactor.h>
 #include <zbluenet/log.h>
 #include <zbluenet/thread.h>
+#include <zbluenet/timestamp.h>
 
 namespace zbluenet {
 	namespace net {
@@ -27,7 +28,10 @@ namespace zbluenet {
 		void SelectReactor::loop()
 		{
 			quit_ = false;
+			Timestamp now;
 			while (!quit_) {
+				now.setNow();
+
 				if (!new_sockets_.empty()) {
 					std::lock_guard<std::mutex> lock(mutex_);
 					for (auto newSock : new_sockets_) {
@@ -43,6 +47,9 @@ namespace zbluenet {
 
 				// 没有连接
 				if (connections_.empty()) {
+					now.setNow();
+					checkTimeout(now);
+
 					continue;
 				}
 
@@ -55,6 +62,9 @@ namespace zbluenet {
 				}
 
 				this->doWriteEvent();
+
+				now.setNow();
+				checkTimeout(now);
 			}
 
 			LOG_MESSAGE_DEBUG("SelectReactor::loop:  thread[%d] exit", Thread::getId());
@@ -84,16 +94,6 @@ namespace zbluenet {
 				fd_read_.copy(fd_read_back_);
 			}
 
-			// 计算可写集合
-	/*		bool need_write = false;
-			fd_write_.zero();
-			for (auto iter : connections_) {
-				if (iter.second->getWriteBuffer().readableBytes() > 0) {
-					need_write = true;
-					fd_write_.add(iter.second->getSocket()->getFD());
-				}
-			}*/
-
 			timeval dt = { 0, 1 };
 			int ret = 0;
 
@@ -102,12 +102,6 @@ namespace zbluenet {
 			maxSock = max_sock_ + 1;
 #endif
 
-			/*	if (need_write) {
-					ret = select(maxSock, fd_read_.fdset(), fd_write_.fdset(), nullptr, &dt);
-				} else {
-
-				}
-	*/
 			ret = select(maxSock, fd_read_.fdset(), nullptr, nullptr, &dt);
 
 			if (ret <0) {

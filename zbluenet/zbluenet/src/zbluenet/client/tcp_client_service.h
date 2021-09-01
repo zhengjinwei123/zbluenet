@@ -12,6 +12,7 @@
 #include <zbluenet/net/epoll_service.h>
 #include <zbluenet/client/net_client_thread.h>
 #include <zbluenet/protocol/net_protocol.h>
+#include <zbluenet/net/socket_address.h>
 
 namespace zbluenet {
 
@@ -48,58 +49,35 @@ namespace zbluenet {
 		public:
 			using NewNetCommandCallback = std::function<void(std::unique_ptr<NetCommand> &)>;
 			using CreateMessageFunc = std::function<zbluenet::exchange::BaseStruct *(int)>;
-			using RecvMessageCallback = std::function< void(NetThread *, TcpSocket::SocketId, DynamicBuffer *, const NewNetCommandCallback &)>;
-
 			using MessageHandler = std::function<void(const zbluenet::exchange::BaseStruct *)>;
 			using MessageHandlerMap = std::unordered_map<int, MessageHandler>;
-			using NetCommandQueue = MessageQueue<NetCommand *>; // 发送消息的队列
 
 
-			TcpClientService(const std::string &host, uint16_t port,
+			TcpClientService(const std::string &client_name, const std::string &host, uint16_t port,
 				const CreateMessageFunc &create_message_func, int reconnect_interval_ms = 5000);
 			~TcpClientService();
 
-			bool createClient();
-			bool init(const CreateMessageFunc &create_message_func, const NewNetCommandCallback &new_net_cmd_cb);
-			void start();
-			void stop();
-
+			bool createClient(const NewNetCommandCallback &new_net_cmd_cb);
 			void sendMessage(int message_id, std::unique_ptr<zbluenet::exchange::BaseStruct> &message);
-			MessageHandler getMessageHandler(int message_id) const;
 			void setMessageHandler(int message_id, const MessageHandler &message_handler);
 			void processNetCommand(const NetCommand *cmd);
 
-			bool connect();
-			void disconnect();
+			const std::string& getClientName() const { return client_name_;  }
 
-			void onConnect();
-			void onDisconnect();
-
-			void startConnectTimer();
-			void stopConnectTimer();
-			void onTimer(int64_t timer_id);
-
-			void onRecvMessage(NetThread *net_thread,
-				TcpSocket::SocketId socket_id,
-				DynamicBuffer *buffer,
-				const NewNetCommandCallback &new_net_cmd_cb);
-
-			void push(std::unique_ptr<NetCommand> &cmd);
 
 		private:
-			bool connected_;
-			TcpSocket::SocketId socket_id_;
-			int64_t reconnect_timer_;
-			int reconnect_interval_ms_;
+			MessageHandler getMessageHandler(int message_id) const;
+			void push(std::unique_ptr<NetCommand> &cmd);
+			void onConnect();
+			void onDisconnect();//66063558
+			
+		private:
 			SocketAddress remote_addr_;
-			TcpSocket tcp_socket_;
-			NetClientThread net_thread_;
-			NetProtocol net_protocol_;
+			std::string client_name_;
 
+			NetClientThread net_thread_;
 			CreateMessageFunc create_message_func_;
 			MessageHandlerMap message_handlers_;
-			NetCommandQueue client_net_command_queue_;
-			NewNetCommandCallback new_net_cmd_cb_;
 		};
 	} // namespace client
 } // namespace zbluenet

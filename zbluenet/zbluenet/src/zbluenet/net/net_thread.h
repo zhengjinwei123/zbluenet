@@ -48,7 +48,7 @@ namespace zbluenet {
 				const RecvMessageCallback &recv_message_cb);
 
 			void start(const Thread::EventCallback &onBefore, const Thread::EventCallback &onEnd); // 启动线程
-			void stop();
+			virtual  void stop();
 			void push(NetCommand *cmd); // 接收来自主线程发送来的消息
 			void attach(std::unique_ptr<TcpSocket> &peer_socket); // 主线程告诉 新连接到来
 

@@ -70,8 +70,11 @@ namespace zbluenet {
 			using MessageHandler = std::function<void(const NetId &, const zbluenet::exchange::BaseStruct *)>;
 			using MessageHandlerMap = std::unordered_map<int, MessageHandler>;
 			using NetCommandQueue = MessageQueue<NetCommand *>; // 发送消息的队列
-		
 
+			using EventFunc = std::function<void(zbluenet::Timestamp& )>;
+			using EventFuncList = std::vector<EventFunc>;
+
+		
 		public:
 			TcpService(const std::string &host, uint16_t port, uint8_t reactor_num);
 			virtual ~TcpService();
@@ -100,7 +103,12 @@ namespace zbluenet {
 			IOService::TimerId startTimer(int64_t timeout_ms, const IOService::TimerCallback &timer_cb, int call_times = -1);
 			void stopTimer(TimerId timer_id);
 
+			void attachNetCommandQueue(NetCommandQueue *queue);
+			
+			void addEventFunc(const EventFunc& event_func);
+
 		private:
+			void doEventFuncs(zbluenet::Timestamp &now);
 			void push(std::unique_ptr<NetCommand> &cmd);
 			void loop();
 			void onNewConnCallback(std::unique_ptr<TcpSocket> &peer_socket);
@@ -134,6 +142,7 @@ namespace zbluenet {
 			MessageHandlerMap message_handlers_;
 			int max_request_per_second_;
 			NetCommandQueue client_net_command_queue_;
+			EventFuncList event_funcs_;
 
 #ifndef _WIN32
 			EpollService *epoll_service_;

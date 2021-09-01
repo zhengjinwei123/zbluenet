@@ -31,7 +31,7 @@ void ServerApp::start()
 {
 	zbluenet::LogManager::getInstance()->setMaxLoggerCount(2);
 
-	pserver_ = new zbluenet::server::GameServer("10.235.200.249", 9091, 2);// 127.0.0.1
+	pserver_ = new zbluenet::server::GameServer("127.0.0.1", 9091, 2);// 127.0.0.1
 	std::string log_file_main = "./zbluenet.%Y%m%d.log";
 	pserver_->initMainLogger(log_file_main, zbluenet::LogLevel::DEBUG, true);
 	std::string log_file_net = "./net.%Y%m%d.log";
@@ -57,6 +57,10 @@ void ServerApp::start()
 	pserver_->startTimer(1001, [](int64_t timer_id)-> void {
 		LOG_DEBUG("timer %lld called", timer_id);
 	});*/
+
+	// 连接到battle server
+	battle_server_terminal_.reset(new zbluenet::client::TcpClient("battle_server", "127.0.0.1", 8888));
+	battle_server_terminal_->start(pserver_);
 
 	// 启动服务
 	pserver_->start();

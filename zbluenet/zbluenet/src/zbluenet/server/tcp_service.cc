@@ -78,6 +78,27 @@ namespace zbluenet {
 			return true;
 		}
 
+		void TcpService::attachNetCommandQueue(NetCommandQueue *queue)
+		{
+#ifndef _WIN32 // LINUX
+			queue->attach(*epoll_service_);
+#else 
+
+#endif
+		}
+
+		void TcpService::addEventFunc(const EventFunc& event_func)
+		{
+			event_funcs_.emplace_back(event_func);
+		}
+
+		void TcpService::doEventFuncs(zbluenet::Timestamp &now)
+		{
+			for (auto iter = event_funcs_.begin(); iter != event_funcs_.end(); ++iter) {
+				(*iter)(now);
+			}
+		}
+
 		bool TcpService::init(const CreateMessageFunc &create_messgae_func, const RecvMessageCallback &recv_message_cb, int max_request_per_second)
 		{
 			if (net_acceptor_ == nullptr) {
@@ -148,6 +169,7 @@ namespace zbluenet {
 				// 处理业务逻辑
 
 				onClientNetCommandQueueRead();
+				doEventFuncs(now);
 
 				// 处理定时器业务
 				checkTimeout(now);

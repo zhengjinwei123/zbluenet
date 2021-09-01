@@ -1,0 +1,54 @@
+[Net][10:02:42:107] 1111122222
+
+[Net][10:02:42:109] TcpServer::createService passiveOpenNonblock failed
+
+[Net][10:03:37:771] create listen socket success: 127.0.0.1:9091
+
+[Net][10:03:37:773] net_threads_ init max_connection(30000)  thread_num(2)  per_thread_num(15001)
+
+[Net][10:03:37:778] server start success
+
+[Net][10:04:59:727] create listen socket success: 127.0.0.1:9091
+
+[Net][10:04:59:729] net_threads_ init max_connection(30000)  thread_num(2)  per_thread_num(15001)
+
+[Net][10:05:50:999] server start success
+
+[Net][10:07:31:643] create listen socket success: 127.0.0.1:9091
+
+[Net][10:07:31:645] net_threads_ init max_connection(30000)  thread_num(2)  per_thread_num(15001)
+
+[Net][10:08:14:984] server start success
+
+[Net][10:09:59:951] create listen socket success: 127.0.0.1:9091
+
+[Net][10:09:59:952] net_threads_ init max_connection(30000)  thread_num(2)  per_thread_num(15001)
+
+[Net][10:09:59:956] server start success
+
+[Net][10:10:53:205] create listen socket success: 127.0.0.1:9091
+
+[Net][10:10:53:208] net_threads_ init max_connection(30000)  thread_num(2)  per_thread_num(15001)
+
+[Net][10:10:53:212] server start success
+
+[Net][10:15:36:427] create listen socket success: 127.0.0.1:9091
+
+[Net][10:15:36:429] net_threads_ init max_connection(30000)  thread_num(2)  per_thread_num(15001)
+
+[Net][10:17:54:274] create listen socket success: 127.0.0.1:9091
+
+[Net][10:17:54:276] net_threads_ init max_connection(30000)  thread_num(2)  per_thread_num(15001)
+
+[Net][10:23:07:834] create listen socket success: 127.0.0.1:9091
+
+[Net][10:23:07:836] net_threads_ init max_connection(30000)  thread_num(2)  per_thread_num(15001)
+
+[Net][10:23:15:235] server start success
+
+[Net][10:25:58:406] create listen socket success: 127.0.0.1:9091
+
+[Net][10:25:58:408] net_threads_ init max_connection(30000)  thread_num(2)  per_thread_num(15001)
+
+[Net][10:25:58:413] server start success
+

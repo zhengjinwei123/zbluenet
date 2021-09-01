@@ -341,7 +341,6 @@ namespace zbluenet {
 
 		 bool Reactor::sendMessageThenClose(SocketId socket_id, const char *buffer, size_t size)
 		 {
-
 			 return sendMessage(socket_id, buffer, size, std::bind(&Reactor::sendCompleteCloseCallback, this, std::placeholders::_1, std::placeholders::_2));
 		 }
 

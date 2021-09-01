@@ -168,13 +168,13 @@
     <ClCompile Include="src\zbluenet\task\mysql_async_task.cc">
       <Filter>头文件\task</Filter>
     </ClCompile>
-    <ClCompile Include="src\zbluenet\net\net_client.cc">
-      <Filter>头文件\net</Filter>
-    </ClCompile>
     <ClCompile Include="src\zbluenet\client\net_client_thread.cc">
       <Filter>头文件\client</Filter>
     </ClCompile>
     <ClCompile Include="src\zbluenet\client\tcp_client_service.cc">
+      <Filter>头文件\client</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zbluenet\client\tcp_client.cc">
       <Filter>头文件\client</Filter>
     </ClCompile>
   </ItemGroup>
@@ -341,13 +341,13 @@
     <ClInclude Include="src\zbluenet\task\mysql_async_task.h">
       <Filter>头文件\task</Filter>
     </ClInclude>
-    <ClInclude Include="src\zbluenet\net\net_client.h">
-      <Filter>头文件\net</Filter>
-    </ClInclude>
     <ClInclude Include="src\zbluenet\client\net_client_thread.h">
       <Filter>头文件\client</Filter>
     </ClInclude>
     <ClInclude Include="src\zbluenet\client\tcp_client_service.h">
+      <Filter>头文件\client</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zbluenet\client\tcp_client.h">
       <Filter>头文件\client</Filter>
     </ClInclude>
   </ItemGroup>

@@ -15,7 +15,6 @@ namespace zbluenet {
 
 		GameService::~GameService()
 		{
-		
 		}
 
 		bool GameService::initLogger(const std::string &file_path_name,

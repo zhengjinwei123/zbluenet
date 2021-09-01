@@ -83,6 +83,16 @@ namespace zbluenet {
 				pGameService_->stopTimer(timer_id);
 			}
 
+			void attachNetCommandQueue(zbluenet::server::TcpService::NetCommandQueue *queue)
+			{
+				pGameService_->attachNetCommandQueue(queue);
+			}
+
+			void addEventFunc(const zbluenet::server::TcpService::EventFunc& event_func)
+			{
+				pGameService_->addEventFunc(event_func);
+			}
+
 		private:
 			bool check();
 			bool registerMessageCreateFunc(int id, zbluenet::exchange::BaseStruct::CreateFunc create_func);
