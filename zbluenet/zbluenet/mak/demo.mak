@@ -1,9 +1,9 @@
 TARGET = bin/demo
 SRCS = \
 src/demo/main.cc \
-src/demo/proto/test.pb.cc \
+src/demo/proto/c2s.pb.cc \
 src/demo/c2s_login_message_handler.cc \
-src/demo/c2s_message.cc \
+src/demo/c2s.cc \
 src/demo/server_app.cc \
 
 

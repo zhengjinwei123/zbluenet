@@ -1,0 +1,23 @@
+[DEBUG][10:42:18:334][src/zbluenet/net/epoller.cc:64](add)Epoller::add failed 16
+[**ERROR**][10:42:18:335][src/zbluenet/client/tcp_client_service.cc:28](createClient)tcp client create failed (battle_server) (127.0.0.1:8888)
+[DEBUG][10:50:43:481][src/zbluenet/net/epoller.cc:64](add)Epoller::add failed (-1) (16)
+[**ERROR**][10:50:43:481][src/zbluenet/client/tcp_client_service.cc:28](createClient)tcp client create failed (battle_server) (127.0.0.1:8888)
+[INFO][10:55:10:595][src/zbluenet/client/net_client_thread.cc:51](connect)tcp client connect failed (127.0.0.1:8888), try reconnect after 5000 millisecond
+[INFO][10:55:15:601][src/zbluenet/client/net_client_thread.cc:92](onTimer)tcp client reconnect to (127.0.0.1:8888)
+[INFO][10:55:15:602][src/zbluenet/client/net_client_thread.cc:51](connect)tcp client connect failed (127.0.0.1:8888), try reconnect after 5000 millisecond
+[INFO][10:55:20:607][src/zbluenet/client/net_client_thread.cc:92](onTimer)tcp client reconnect to (127.0.0.1:8888)
+[INFO][10:55:20:607][src/zbluenet/client/net_client_thread.cc:51](connect)tcp client connect failed (127.0.0.1:8888), try reconnect after 5000 millisecond
+[INFO][10:55:25:618][src/zbluenet/client/net_client_thread.cc:92](onTimer)tcp client reconnect to (127.0.0.1:8888)
+[INFO][10:55:25:619][src/zbluenet/client/net_client_thread.cc:51](connect)tcp client connect failed (127.0.0.1:8888), try reconnect after 5000 millisecond
+[INFO][10:55:30:624][src/zbluenet/client/net_client_thread.cc:92](onTimer)tcp client reconnect to (127.0.0.1:8888)
+[INFO][10:55:30:624][src/zbluenet/client/net_client_thread.cc:51](connect)tcp client connect failed (127.0.0.1:8888), try reconnect after 5000 millisecond
+[INFO][10:55:35:631][src/zbluenet/client/net_client_thread.cc:92](onTimer)tcp client reconnect to (127.0.0.1:8888)
+[INFO][10:55:35:632][src/zbluenet/client/net_client_thread.cc:51](connect)tcp client connect failed (127.0.0.1:8888), try reconnect after 5000 millisecond
+[INFO][10:55:40:637][src/zbluenet/client/net_client_thread.cc:92](onTimer)tcp client reconnect to (127.0.0.1:8888)
+[INFO][10:55:40:637][src/zbluenet/client/net_client_thread.cc:51](connect)tcp client connect failed (127.0.0.1:8888), try reconnect after 5000 millisecond
+[INFO][10:55:45:644][src/zbluenet/client/net_client_thread.cc:92](onTimer)tcp client reconnect to (127.0.0.1:8888)
+[INFO][10:55:45:644][src/zbluenet/client/net_client_thread.cc:51](connect)tcp client connect failed (127.0.0.1:8888), try reconnect after 5000 millisecond
+[INFO][10:55:50:651][src/zbluenet/client/net_client_thread.cc:92](onTimer)tcp client reconnect to (127.0.0.1:8888)
+[INFO][10:55:50:651][src/zbluenet/client/net_client_thread.cc:51](connect)tcp client connect failed (127.0.0.1:8888), try reconnect after 5000 millisecond
+[INFO][10:55:55:657][src/zbluenet/client/net_client_thread.cc:92](onTimer)tcp client reconnect to (127.0.0.1:8888)
+[INFO][10:55:55:658][src/zbluenet/client/net_client_thread.cc:51](connect)tcp client connect failed (127.0.0.1:8888), try reconnect after 5000 millisecond

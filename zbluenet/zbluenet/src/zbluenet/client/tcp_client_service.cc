@@ -22,7 +22,7 @@ namespace zbluenet {
 
 		bool TcpClientService::createClient(const NewNetCommandCallback &new_net_cmd_cb)
 		{
-			if (false == net_thread_.init(0, 0, 81920, 409600, new_net_cmd_cb,
+			if (false == net_thread_.init(0, 10, 81920, 409600, new_net_cmd_cb,
 				std::bind(&NetClientThread::onRecvMessage, &net_thread_, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3, std::placeholders::_4)))
 			{
 				LOG_ERROR("tcp client create failed (%s) (%s:%d)", client_name_.c_str(), remote_addr_.getIp().c_str(), remote_addr_.getPort());

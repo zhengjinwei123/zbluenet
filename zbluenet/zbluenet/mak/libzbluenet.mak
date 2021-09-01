@@ -36,7 +36,10 @@ src/zbluenet/server/game_server.cc \
 src/zbluenet/server/game_service.cc \
 src/zbluenet/server/tcp_service.cc \
 src/zbluenet/net/self_pipe.cc \
-src/zbluenet/net/epoll_service.cc
+src/zbluenet/net/epoll_service.cc \
+src/zbluenet/client/net_client_thread.cc \
+src/zbluenet/client/tcp_client_service.cc \
+src/zbluenet/client/tcp_client.cc \
 
 
 LINK_TYPE = static

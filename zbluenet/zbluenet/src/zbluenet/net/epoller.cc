@@ -29,10 +29,12 @@ namespace zbluenet {
 
 			epoll_fd_ = epoll_create(max_event_num);
 			if (epoll_fd_ == -1) {
+				LOG_ERROR(" epoll_create(%d) failed", max_event_num);
 				return -1;
 			}
 			int flags = ::fcntl(epoll_fd_, F_GETFD, 0);
 			if (::fcntl(epoll_fd_, F_SETFD, flags | FD_CLOEXEC) != 0) {
+				LOG_ERROR(" Epoller fcntl (%d) failed", max_event_num);
 				return -1;
 			}
 			return 0;
@@ -61,7 +63,7 @@ namespace zbluenet {
 			}
 			
 			if (::epoll_ctl(epoll_fd_, EPOLL_CTL_ADD, io_device->getFD(), &event) != 0) {
-				LOG_DEBUG("Epoller::add failed %d", io_device->getFD());
+				LOG_DEBUG("Epoller::add failed (%d) (%d)", epoll_fd_, io_device->getFD());
 				return false;
 			}
 			return true;

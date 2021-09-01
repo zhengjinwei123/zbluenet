@@ -5,6 +5,7 @@
 #include <zbluenet/net/self_pipe.h>
 #include <zbluenet/net/io_service.h>
 #include <zbluenet/concurrent_queue.h>
+#include <zbluenet/log.h>
 
 #include <functional>
 #include <cstddef>
@@ -38,6 +39,7 @@ namespace zbluenet {
 				if (pipe_.open() == false ||
 					pipe_.setNonblock() == false ||
 					pipe_.setCloseOnExec() == false) {
+					LOG_ERROR("MessageQueue::attach failed");
 					return false;
 				}
 

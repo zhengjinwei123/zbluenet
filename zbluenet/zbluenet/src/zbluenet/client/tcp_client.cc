@@ -36,7 +36,7 @@ namespace zbluenet {
 				this->onClientNetCommandQueueRead(nullptr);
 			});
 #else
-			client_message_queue_->setRecvMessageCallback([=](NetCommandQueue *queue) -> void {
+			client_net_cmd_queue_.setRecvMessageCallback([=](NetCommandQueue *queue) -> void {
 				this->onClientNetCommandQueueRead(queue);
 			});
 			game_server->attachNetCommandQueue(&client_net_cmd_queue_);
