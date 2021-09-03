@@ -1,0 +1,60 @@
+[Net][11:11:56:676] create listen socket success: 127.0.0.1:9091
+
+[Net][11:11:56:679] net_threads_ init max_connection(30000)  thread_num(2)  per_thread_num(15001)
+
+[Net][11:11:56:685] server start success
+
+[Net][11:13:41:726] create listen socket success: 127.0.0.1:9091
+
+[Net][11:13:41:728] net_threads_ init max_connection(30000)  thread_num(2)  per_thread_num(15001)
+
+[Net][11:13:41:734] server start success
+
+[Net][11:13:41:736] SelectReactor::doNetEvent error
+
+[Net][11:13:41:737] SelectReactor::loop:  thread[19820] exit
+
+[Net][17:42:15:309] create listen socket success: 127.0.0.1:9091
+
+[Net][17:42:15:311] net_threads_ init max_connection(30000)  thread_num(2)  per_thread_num(15001)
+
+[Net][17:42:15:318] server start success
+
+[Net][17:42:35:013] create listen socket success: 127.0.0.1:9091
+
+[Net][17:42:35:014] net_threads_ init max_connection(30000)  thread_num(2)  per_thread_num(15001)
+
+[Net][17:42:35:020] server start success
+
+[Net][17:42:35:022] SelectReactor::doNetEvent error
+
+[Net][17:42:35:022] SelectReactor::loop:  thread[17128] exit
+
+[Net][17:51:01:642] create listen socket success: 127.0.0.1:9091
+
+[Net][17:51:01:643] net_threads_ init max_connection(30000)  thread_num(2)  per_thread_num(15001)
+
+[Net][17:56:08:186] create listen socket success: 127.0.0.1:9091
+
+[Net][17:56:08:188] net_threads_ init max_connection(30000)  thread_num(2)  per_thread_num(15001)
+
+[Net][17:56:08:192] server start success
+
+[Net][18:00:57:475] create listen socket success: 127.0.0.1:9091
+
+[Net][18:00:57:476] net_threads_ init max_connection(30000)  thread_num(2)  per_thread_num(15001)
+
+[Net][18:00:57:481] server start success
+
+[Net][18:03:33:739] create listen socket success: 127.0.0.1:9091
+
+[Net][18:03:33:743] net_threads_ init max_connection(30000)  thread_num(2)  per_thread_num(15001)
+
+[Net][18:03:45:258] server start success
+
+[Net][18:10:29:789] create listen socket success: 127.0.0.1:9091
+
+[Net][18:10:29:791] net_threads_ init max_connection(30000)  thread_num(2)  per_thread_num(15001)
+
+[Net][18:10:29:795] server start success
+

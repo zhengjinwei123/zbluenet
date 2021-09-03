@@ -7,7 +7,7 @@ namespace zbluenet {
 	namespace client {
 
 		NetClientThread::NetClientThread(int max_recv_packet_lenth, int max_send_packet_length,
-				const NetClientThread::CreateMessageFunc &create_message_func, int reconnect_interval_ms, std::string ip, uint16_t port) :
+			const NetClientThread::CreateMessageFunc &create_message_func, int reconnect_interval_ms, std::string ip, uint16_t port) :
 			NetThread(max_recv_packet_lenth, max_send_packet_length, create_message_func),
 			connected_(false),
 			reconnect_interval_ms_(reconnect_interval_ms),
@@ -47,18 +47,21 @@ namespace zbluenet {
 
 		bool NetClientThread::connect()
 		{
-			if (false == tcp_socket_.activeOpenNonblock(remote_addr_)) {
+			std::unique_ptr<TcpSocket> tcp_socket(new TcpSocket());
+			if (false == tcp_socket->activeOpenNonblock(remote_addr_)) {
 				LOG_INFO("tcp client connect failed (%s:%d), try reconnect after %d millisecond", remote_addr_.getIp().c_str(), remote_addr_.getPort(), reconnect_interval_ms_);
 				startConnectTimer();
 				return false;
 			}
-			socket_id_ = tcp_socket_.getId();
+
+			// ·ÖÅäsocketid
+			socket_id_ = socket_id_allocator_.nextId(tcp_socket->getFD());
+			tcp_socket->setId(socket_id_);
 			connected_ = true;
 
-			std::unique_ptr<TcpSocket> socket(new TcpSocket());
-			this->attach(socket);
+			this->attach(tcp_socket);
 
-			LOG_INFO("tcp client connect success (%s:%d)", remote_addr_.getIp().c_str(), remote_addr_.getPort());
+		/*	LOG_INFO("tcp client connect success (%s:%d)", remote_addr_.getIp().c_str(), remote_addr_.getPort());*/
 
 			return true;
 		}

@@ -108,7 +108,7 @@ namespace zbluenet {
 				if (errno == EINTR) {
 					return true;
 				}
-				LOG_MESSAGE_ERROR("SelectReactor::doNetEvent error");
+				LOG_MESSAGE_ERROR("SelectReactor::doNetEvent error: %d", errno);
 				return false;
 			}
 			else if (ret == 0) {

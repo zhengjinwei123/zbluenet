@@ -1,0 +1,42 @@
+[INFO][11:11:57:692][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:51](connect)tcp client connect failed (127.0.0.1:8888), try reconnect after 5000 millisecond
+[INFO][11:12:02:692][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:92](onTimer)tcp client reconnect to (127.0.0.1:8888)
+[INFO][11:12:03:695][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:51](connect)tcp client connect failed (127.0.0.1:8888), try reconnect after 5000 millisecond
+[INFO][11:12:08:696][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:92](onTimer)tcp client reconnect to (127.0.0.1:8888)
+[INFO][11:12:09:699][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:51](connect)tcp client connect failed (127.0.0.1:8888), try reconnect after 5000 millisecond
+[INFO][11:12:14:700][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:92](onTimer)tcp client reconnect to (127.0.0.1:8888)
+[INFO][11:12:15:702][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:51](connect)tcp client connect failed (127.0.0.1:8888), try reconnect after 5000 millisecond
+[INFO][11:12:20:703][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:92](onTimer)tcp client reconnect to (127.0.0.1:8888)
+[INFO][11:12:21:703][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:51](connect)tcp client connect failed (127.0.0.1:8888), try reconnect after 5000 millisecond
+[INFO][11:12:26:703][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:92](onTimer)tcp client reconnect to (127.0.0.1:8888)
+[INFO][11:12:27:705][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:51](connect)tcp client connect failed (127.0.0.1:8888), try reconnect after 5000 millisecond
+[INFO][11:12:32:705][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:92](onTimer)tcp client reconnect to (127.0.0.1:8888)
+[INFO][11:12:33:707][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:51](connect)tcp client connect failed (127.0.0.1:8888), try reconnect after 5000 millisecond
+[DEBUG][11:13:41:735][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\tcp_client_service.cc:62](onConnect)tcp client connect success, client_name:(battle_server)  remote_addr:[127.0.0.1:8888]
+[INFO][11:13:41:735][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:61](connect)tcp client connect success (127.0.0.1:8888)
+[DEBUG][11:13:41:737][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\tcp_client_service.cc:67](onDisconnect)tcp client disconnect, client_name:(battle_server)  remote_addr:[127.0.0.1:8888]
+[INFO][17:42:16:320][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:51](connect)tcp client connect failed (127.0.0.1:8888), try reconnect after 5000 millisecond
+[INFO][17:42:35:020][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:61](connect)tcp client connect success (127.0.0.1:8888)
+[DEBUG][17:42:35:020][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\tcp_client_service.cc:62](onConnect)tcp client connect success, client_name:(battle_server)  remote_addr:[127.0.0.1:8888]
+[DEBUG][17:42:35:022][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\tcp_client_service.cc:67](onDisconnect)tcp client disconnect, client_name:(battle_server)  remote_addr:[127.0.0.1:8888]
+[DEBUG][18:01:15:687][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\tcp_client_service.cc:62](onConnect)tcp client connect success, client_name:(battle_server)  remote_addr:[127.0.0.1:8888]
+[INFO][18:01:15:687][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:64](connect)tcp client connect success (127.0.0.1:8888)
+[DEBUG][18:01:39:469][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\tcp_client_service.cc:67](onDisconnect)tcp client disconnect, client_name:(battle_server)  remote_addr:[127.0.0.1:8888]
+[INFO][18:01:44:469][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:95](onTimer)tcp client reconnect to (127.0.0.1:8888)
+[INFO][18:03:45:259][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:64](connect)tcp client connect success (127.0.0.1:8888)
+[DEBUG][18:03:45:259][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\tcp_client_service.cc:62](onConnect)tcp client connect success, client_name:(battle_server)  remote_addr:[127.0.0.1:8888]
+[DEBUG][18:03:50:134][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\tcp_client_service.cc:67](onDisconnect)tcp client disconnect, client_name:(battle_server)  remote_addr:[127.0.0.1:8888]
+[INFO][18:03:55:134][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:95](onTimer)tcp client reconnect to (127.0.0.1:8888)
+[INFO][18:10:29:795][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:64](connect)tcp client connect success (127.0.0.1:8888)
+[DEBUG][18:10:29:796][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\tcp_client_service.cc:62](onConnect)tcp client connect success, client_name:(battle_server)  remote_addr:[127.0.0.1:8888]
+[DEBUG][18:10:38:048][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\tcp_client_service.cc:67](onDisconnect)tcp client disconnect, client_name:(battle_server)  remote_addr:[127.0.0.1:8888]
+[INFO][18:10:43:049][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:95](onTimer)tcp client reconnect to (127.0.0.1:8888)
+[INFO][18:10:44:052][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:52](connect)tcp client connect failed (127.0.0.1:8888), try reconnect after 5000 millisecond
+[INFO][18:10:49:052][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:95](onTimer)tcp client reconnect to (127.0.0.1:8888)
+[INFO][18:10:50:057][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:52](connect)tcp client connect failed (127.0.0.1:8888), try reconnect after 5000 millisecond
+[INFO][18:10:55:057][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:95](onTimer)tcp client reconnect to (127.0.0.1:8888)
+[INFO][18:10:55:058][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:64](connect)tcp client connect success (127.0.0.1:8888)
+[DEBUG][18:10:55:058][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\tcp_client_service.cc:62](onConnect)tcp client connect success, client_name:(battle_server)  remote_addr:[127.0.0.1:8888]
+[DEBUG][18:11:00:366][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\tcp_client_service.cc:67](onDisconnect)tcp client disconnect, client_name:(battle_server)  remote_addr:[127.0.0.1:8888]
+[INFO][18:11:05:366][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:95](onTimer)tcp client reconnect to (127.0.0.1:8888)
+[INFO][18:11:05:367][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\net_client_thread.cc:64](connect)tcp client connect success (127.0.0.1:8888)
+[DEBUG][18:11:05:367][e:\mygit1\zblue\zbluenet\zbluenet\zbluenet\src\zbluenet\client\tcp_client_service.cc:62](onConnect)tcp client connect success, client_name:(battle_server)  remote_addr:[127.0.0.1:8888]

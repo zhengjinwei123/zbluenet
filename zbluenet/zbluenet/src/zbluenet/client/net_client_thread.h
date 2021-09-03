@@ -12,6 +12,7 @@
 #include <zbluenet/net/message_queue.h>
 #include <zbluenet/protocol/net_command.h>
 #include <zbluenet/net/socket_address.h>
+#include <zbluenet/net/socket_id_allocator.h>
 
 namespace zbluenet {
 
@@ -21,6 +22,7 @@ namespace zbluenet {
 	using net::SocketAddress;
 	using protocol::NetCommand;
 	using net::MessageQueue;
+	using net::SocketIdAllocator;
 
 	namespace exchange {
 		class BaseStruct;
@@ -66,8 +68,8 @@ namespace zbluenet {
 			int reconnect_interval_ms_;
 			TcpSocket::SocketId socket_id_;
 			SocketAddress remote_addr_;
-			TcpSocket tcp_socket_;
 			int64_t reconnect_timer_;
+			SocketIdAllocator socket_id_allocator_;
 
 			NetProtocol net_protocol_;
 			NewNetCommandCallback new_net_cmd_cb_;
