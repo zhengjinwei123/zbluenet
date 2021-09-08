@@ -58,3 +58,9 @@
 
 [Net][18:10:29:795] server start success
 
+[Net][18:28:11:153] create listen socket success: 127.0.0.1:9091
+
+[Net][18:28:11:155] net_threads_ init max_connection(30000)  thread_num(2)  per_thread_num(15001)
+
+[Net][18:28:11:160] server start success
+

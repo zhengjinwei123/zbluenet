@@ -19,4 +19,8 @@ void C2SLoginMessageHandler::onC2SLoginRequest(const zbluenet::net::NetId &net_i
 	std::unique_ptr<protocol::S2CLoginRespMessage> message(new protocol::S2CLoginRespMessage());
 	message->data.set_ret(9999);
 	sServerApp->sendMessage(net_id, message);
+
+	std::unique_ptr<protocol::S2CLoginRespMessage> message2(new protocol::S2CLoginRespMessage());
+	message2->data.set_ret(9999);
+	sServerApp->sendBattleMessage(1001, message2);
 }

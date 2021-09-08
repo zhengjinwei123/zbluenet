@@ -59,6 +59,14 @@ public:
 		pserver_->broadcastMessage(message_id, messsage);
 	}
 
+
+	template <typename AnyType>
+	void sendBattleMessage(int message_id, std::unique_ptr <AnyType> &messsage)
+	{
+		std::unique_ptr<zbluenet::exchange::BaseStruct> wrap_message(messsage.release());
+		battle_server_terminal_->sendMessage(message_id, wrap_message);
+	}
+
 private:
 	zbluenet::server::GameServer *pserver_;
 	static ServerApp *instance_;

@@ -160,7 +160,7 @@ namespace zbluenet {
 						return;
 					}
 					
-					if (false == reactor_->sendMessage(cmd->id.socket_id, encode_buffer_.readBegin(), encode_buffer_.readableBytes())) {
+					if (false == reactor_->sendMessage(socket_id_, encode_buffer_.readBegin(), encode_buffer_.readableBytes())) {
 						this->onClose();
 						return;
 					}
